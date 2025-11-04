@@ -1,0 +1,7 @@
+.header {
+  @include flex-between;
+  padding: $spacing-lg $spacing-xl;
+  box-shadow: $shadow-lg;
+  font-weight: $font-weight-bold;
+  font-size: xx-large;
+}

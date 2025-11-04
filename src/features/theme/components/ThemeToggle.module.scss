@@ -1,0 +1,11 @@
+.toggle {
+  @include flex-center;
+  font-size: medium;
+  gap: $spacing-sm;
+  padding: $spacing-xs;
+  background: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
