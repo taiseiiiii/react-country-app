@@ -1,11 +1,33 @@
 .toggle {
   @include flex-center;
-  font-size: medium;
-  gap: $spacing-sm;
-  padding: $spacing-xs;
+  gap: $spacing-xs;
+  padding: 0;
   background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  font-weight: $font-weight-semibold;
+  font-size: 0.75rem;
+  transition: opacity $transition-fast;
 
   &:hover {
     opacity: 0.7;
   }
+
+  @include desktop {
+    font-size: 1rem;
+    gap: $spacing-sm;
+  }
+}
+
+.icon {
+  font-size: 1rem;
+
+  @include desktop {
+    font-size: 1.25rem;
+  }
+}
+
+.toggleText {
+  color: var(--color-text);
 }

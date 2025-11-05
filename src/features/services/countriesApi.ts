@@ -5,7 +5,9 @@ const API_BASE_URL = "https://restcountries.com/v3.1";
 
 export const countriesApi = {
   getAll: (): Promise<Country[]> => {
-    return fetchApi<Country[]>(`${API_BASE_URL}/all`);
+    return fetchApi<Country[]>(
+      `${API_BASE_URL}/all?fields=name,population,region,capital,flags`
+    );
   },
   getByCode: (code: string): Promise<Country[]> => {
     return fetchApi<Country[]>(`${API_BASE_URL}/alpha/${code}`);

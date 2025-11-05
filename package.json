@@ -11,10 +11,9 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.90.6",
-    "ionicons": "^8.0.13",
+    "lucide-react": "^0.552.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-ionicons": "^4.2.1",
     "react-router-dom": "^7.9.5"
   },
   "devDependencies": {

@@ -3,9 +3,9 @@ import styles from "./Header.module.scss";
 
 export function Header() {
   return (
-    <div className={styles.header}>
-      <p>Where in the world?</p>
+    <header className={styles.header}>
+      <h1 className={styles.title}>Where in the world?</h1>
       <ThemeToggle />
-    </div>
+    </header>
   );
 }

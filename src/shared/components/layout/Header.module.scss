@@ -3,5 +3,22 @@
   padding: $spacing-lg $spacing-xl;
   box-shadow: $shadow-lg;
   font-weight: $font-weight-bold;
-  font-size: xx-large;
+  background: var(--color-elements);
+
+  font-size: 0.875rem;
+
+  @include desktop {
+    padding: $spacing-lg $spacing-xl;
+    font-size: 1.5rem;
+  }
+}
+
+.title {
+  font-size: 0.875rem;
+  font-weight: $font-weight-bold;
+  margin: 0;
+
+  @include desktop {
+    font-size: 1.5rem;
+  }
 }

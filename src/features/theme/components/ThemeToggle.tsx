@@ -7,7 +7,9 @@ export function ThemeToggle() {
   return (
     <button onClick={toggleTheme} className={styles.toggle}>
       <span>{theme === "dark" ? "☀️" : "🌙"}</span>
-      <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+      <span className={styles.toggleText}>
+        {theme === "dark" ? "Light Mode" : "Dark Mode"}
+      </span>
     </button>
   );
 }
