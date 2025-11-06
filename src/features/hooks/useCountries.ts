@@ -16,3 +16,13 @@ export function useCountryByCode(code: string) {
     enabled: !!code,
   });
 }
+
+export function useBorderCountryByCode(borderCodes: string[]) {
+  return useQuery<Country[], Error>({
+    queryKey: ["borderCountries", borderCodes],
+    queryFn: async () => {
+      return countriesApi.getNameByCode(borderCodes.join(","));
+    },
+    enabled: borderCodes.length > 0,
+  });
+}

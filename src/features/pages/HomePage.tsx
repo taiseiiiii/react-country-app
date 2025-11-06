@@ -58,7 +58,7 @@ export function HomePage() {
         ) : (
           <div className={styles.cardwrapper}>
             {filteredCountries.map((country) => (
-              <CountryCard key={country.cca3} {...country} />
+              <CountryCard key={country.name.official} {...country} />
             ))}
           </div>
         )}

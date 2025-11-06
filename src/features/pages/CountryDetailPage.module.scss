@@ -1,0 +1,110 @@
+@mixin contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.wrapper {
+  @include desktop {
+    @include flex-between;
+  }
+}
+
+.imgArea {
+  width: 100%;
+
+  @include desktop {
+    width: 45%;
+    height: 400px;
+    flex-shrink: 0;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.detailInfoArea {
+  @include desktop {
+    display: flex;
+    align-items: start;
+    gap: $spacing-xl;
+  }
+}
+
+.contentArea {
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.backButton {
+  margin: $spacing-xl 0;
+  background-color: var(--color-elements);
+  padding: $spacing-xs $spacing-sm;
+  min-width: 7em;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: $shadow-md;
+  color: var(--color-text);
+}
+
+.countryName {
+  margin: $spacing-md 0;
+}
+
+.detailLabel {
+  font-weight: $font-weight-bold;
+}
+
+.firstContent {
+  @include contentContainer;
+}
+
+.secondContent {
+  @include contentContainer;
+  margin-top: $spacing-md;
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+.borderArea {
+  margin: $spacing-md 0;
+
+  h3 {
+    margin-bottom: $spacing-sm;
+  }
+
+  button {
+    background-color: var(--color-elements);
+    padding: $spacing-xs $spacing-sm;
+    border-radius: 4px;
+    box-shadow: $shadow-md;
+    margin-right: $spacing-xs;
+    margin-bottom: $spacing-xs;
+    color: var(--color-text);
+  }
+
+  @include desktop {
+    margin: $spacing-2xl 0;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+
+    h3 {
+      margin: 0 $spacing-md 0 0;
+      white-space: nowrap;
+    }
+
+    button {
+      margin: 0;
+    }
+  }
+}

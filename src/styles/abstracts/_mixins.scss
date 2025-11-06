@@ -9,7 +9,7 @@
 
 @mixin flex-between {
   display: flex;
-  align-items: cener;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -52,7 +52,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0, $spacing-md;
+  padding: 0 $spacing-md;
 
   @include desktop {
     padding: 0 $spacing-xl;

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import type { Country } from "../types/country.types";
 import styles from "./CountryCard.module.scss";
 
@@ -7,9 +8,14 @@ export function CountryCard({
   region,
   capital,
   flags,
+  cca3,
 }: Country) {
+  const navigate = useNavigate();
   return (
-    <div className={styles.cardContainer}>
+    <div
+      className={styles.cardContainer}
+      onClick={() => navigate(`/country/${cca3}`)}
+    >
       <img
         src={flags.svg}
         alt={flags.alt || `Flag of ${name.official}`}

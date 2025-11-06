@@ -2,6 +2,12 @@ export interface Country {
   name: {
     common: string;
     official: string;
+    nativeName: {
+      [key: string]: {
+        common: string;
+        official: string;
+      };
+    };
   };
   cca3: string;
   capital?: string[];
